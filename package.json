@@ -1,9 +1,9 @@
 {
-  "name": "shaka",
-  "productName": "shaka",
+  "name": "bidream",
+  "productName": "Bidream",
   "version": "1.0.0",
   "description": "My Electron application description",
-  "main": "src/index.js",
+  "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
     "package": "electron-forge package",
@@ -12,7 +12,7 @@
     "lint": "eslint src --color"
   },
   "keywords": [],
-  "author": "shaka",
+  "author": "bidream.com",
   "license": "MIT",
   "config": {
     "forge": {
@@ -21,19 +21,26 @@
           "squirrel"
         ],
         "darwin": [
+          "dmg",
           "zip"
         ]
       },
       "electronPackagerConfig": {
         "packageManager": "npm",
-        "asar": true
+        "asar": true,
+        "icon": "src/icon"
       },
       "electronWinstallerConfig": {
-        "name": "shaka"
+        "name": "Bidream",
+        "setupIcon": "src/icon.ico"
+      },
+      "electronInstallerDMG": {
+        "icon": "src/icon.icns",
+        "format": "ULFO"
       },
       "github_repository": {
-        "owner": "",
-        "name": ""
+        "owner": "shakawwq",
+        "name": "electron"
       }
     }
   },

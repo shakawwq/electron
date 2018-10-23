@@ -21,7 +21,10 @@ const createWindow = () => {
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
-
+  mainWindow.webContents.on('new-window', (event, url) => {
+    event.preventDefault();
+    mainWindow.loadURL(url);
+  });
   // Emitted when the window is closed.
   mainWindow.on('closed', () => {
     // Dereference the window object, usually you would store windows
