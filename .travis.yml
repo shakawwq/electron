@@ -7,7 +7,9 @@ os:
 git:
   depth: 3
 branches:
-  only: master
+  only:
+    - master
+    - /^v.*$/
 
 cache:
   directories:
@@ -26,7 +28,9 @@ deploy:
   api_key:
     secure: ${GITHUB_TOKEN}
   file_glob: true
-  file: out/make/*.dmg 
+  file: out/make/*.dmg
+  draft: true
   skip_cleanup: true
   on:
+    branch: master
     tags: true
