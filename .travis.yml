@@ -13,15 +13,19 @@ cache:
   directories:
     - "node_modules"
 
-before_install:
-  - node -v
-  - npm -v
-
 install:
   - npm install
-
 script:
   - npm run make
-
 after_success:
   - ls out/make
+
+deploy:
+  provider: releases
+  api_key:
+    secure: ${GITHUB_TOKEN}
+  file_glob: true
+  file: out/make/*.dmg 
+  skip_cleanup: true
+  on:
+    tags: true

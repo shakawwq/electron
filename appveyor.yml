@@ -1,0 +1,32 @@
+version: '{build}-{branch}'
+
+branches:
+  only: master
+clone_depth: 3
+
+cache: node_modules
+
+init:
+  - cmd: git config --global core.autocrlf input
+install:
+  - cmd: >-
+    node --version
+    npm --version
+    npm install
+build_script:
+  - cmd: npm run make
+
+artifacts:
+  - path: out\make\**\*.exe
+    name: exe
+before_deploy:
+  - cmd: tree out\make /f
+deploy:
+  - provider: GitHub
+    auth_token:
+      secure: oWb2X93VBr0F4kAE6U9iJKDYYmUwB0fSmXxWRPE7jF2MXdYHPyztcKMkGdKL+O9Q
+    artifact: exe
+    draft: true
+    on:
+      branch: master
+      appveyor_repo_tag: true

@@ -12,7 +12,7 @@
     "lint": "eslint src --color"
   },
   "keywords": [],
-  "author": "bidream.com",
+  "author": "www.bidream.com",
   "license": "MIT",
   "config": {
     "forge": {
@@ -27,15 +27,14 @@
       "electronPackagerConfig": {
         "packageManager": "npm",
         "asar": true,
-        "icon": "src/icon"
+        "icon": "src/icon",
+        "appCopyright": "Copyright (C) 2018 www.bidream.com"
       },
       "electronWinstallerConfig": {
-        "name": "Bidream",
         "iconUrl": "src/icon.ico",
         "setupIcon": "src/icon.ico"
       },
       "electronInstallerDMG": {
-        "name": "Bidream",
         "icon": "src/icon.icns",
         "format": "ULFO"
       },
