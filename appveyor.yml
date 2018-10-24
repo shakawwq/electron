@@ -1,11 +1,7 @@
 version: '{build}-{branch}'
 
-platform:
-  - x86
-  - x64
 branches:
   only:
-    - master
     - /^v.*$/
 clone_depth: 3
 
