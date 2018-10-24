@@ -16,10 +16,7 @@ cache:
 init:
   - cmd: git config --global core.autocrlf input
 install:
-  - cmd: >-
-      node --version
-      npm --version
-      npm install
+  - cmd: npm install
 build_script:
   - cmd: npm run make
 on_success:
@@ -37,5 +34,4 @@ deploy:
     artifact: exe
     draft: true
     on:
-      branch: master
       appveyor_repo_tag: true
