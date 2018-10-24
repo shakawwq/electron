@@ -1,7 +1,7 @@
 {
   "name": "bidream",
   "productName": "Bidream",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Bidream desktop client",
   "main": "src/main.js",
   "scripts": {
@@ -12,7 +12,7 @@
     "lint": "eslint src --color"
   },
   "keywords": [],
-  "author": "www.bidream.com",
+  "author": "bidream.com",
   "license": "MIT",
   "config": {
     "forge": {
@@ -28,10 +28,9 @@
         "packageManager": "npm",
         "asar": true,
         "icon": "src/icon",
-        "appCopyright": "Copyright (C) 2018 www.bidream.com"
+        "appCopyright": "Copyright (C) 2018 bidream.com"
       },
       "electronWinstallerConfig": {
-        "iconUrl": "src/icon.ico",
         "setupIcon": "src/icon.ico"
       },
       "electronInstallerDMG": {
