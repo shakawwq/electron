@@ -2,7 +2,7 @@
   "name": "bidream",
   "productName": "Bidream",
   "version": "1.0.0",
-  "description": "My Electron application description",
+  "description": "Bidream desktop client",
   "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -21,8 +21,7 @@
           "squirrel"
         ],
         "darwin": [
-          "dmg",
-          "zip"
+          "dmg"
         ]
       },
       "electronPackagerConfig": {
@@ -32,9 +31,11 @@
       },
       "electronWinstallerConfig": {
         "name": "Bidream",
+        "iconUrl": "src/icon.ico",
         "setupIcon": "src/icon.ico"
       },
       "electronInstallerDMG": {
+        "name": "Bidream",
         "icon": "src/icon.icns",
         "format": "ULFO"
       },

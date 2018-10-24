@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+  - "8"
+os:
+  - osx
+
+git:
+  depth: 3
+branches:
+  only: master
+
+cache:
+  directories:
+    - "node_modules"
+
+before_install:
+  - node -v
+  - npm -v
+
+install:
+  - npm install
+
+script:
+  - npm run make
+
+after_success:
+  - ls out/make
