@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "8"
+  - 8
 os:
   - osx
 
@@ -11,7 +11,8 @@ branches:
 
 cache:
   directories:
-    - "node_modules"
+    - node_modules
+    - ~/Library/Caches/electron
 
 install:
   - npm install

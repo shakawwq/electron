@@ -1,10 +1,15 @@
 version: '{build}-{branch}'
 
+platform:
+  - x86
+  - x64
 branches:
   only: master
 clone_depth: 3
 
-cache: node_modules
+cache:
+  - node_modules
+  - '%LOCALAPPDATA%/electron/Cache'
 
 init:
   - cmd: git config --global core.autocrlf input
@@ -15,6 +20,8 @@ install:
     npm install
 build_script:
   - cmd: npm run make
+on_success:
+  - cmd: tree out\make /f
 
 artifacts:
   - path: out\make\**\*.exe
