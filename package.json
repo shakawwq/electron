@@ -1,7 +1,7 @@
 {
   "name": "bidream",
   "productName": "Bidream",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Bidream desktop client",
   "main": "src/main.js",
   "scripts": {
