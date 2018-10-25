@@ -26,8 +26,13 @@ deploy:
   provider: releases
   api_key:
     secure: ${GITHUB_TOKEN}
+  target_commitish: ${TRAVIS_COMMIT}
+  tag_name: ${TRAVIS_TAG}
+  name: Bidream-${TRAVIS_TAG}
+  body: Automated release from Travis CI with added files from AppVeyor build
   file_glob: true
   file: out/make/*.dmg
+  overwrite: true
   draft: true
   skip_cleanup: true
   on:
