@@ -1,8 +1,8 @@
 {
   "name": "bidream",
   "productName": "Bidream",
-  "version": "0.0.7",
-  "description": "Bidream desktop client",
+  "version": "0.1.0",
+  "description": "Bidream Desktop",
   "main": "src/main.js",
   "scripts": {
     "start": "electron-forge start",
@@ -28,7 +28,7 @@
         "packageManager": "npm",
         "asar": true,
         "icon": "src/icon",
-        "appCopyright": "Copyright (C) 2018 bidream.com"
+        "appCopyright": "© 2018 bidream.com"
       },
       "electronWinstallerConfig": {
         "setupIcon": "src/icon.ico"
@@ -36,10 +36,6 @@
       "electronInstallerDMG": {
         "icon": "src/icon.icns",
         "format": "ULFO"
-      },
-      "github_repository": {
-        "owner": "shakawwq",
-        "name": "electron"
       }
     }
   },
