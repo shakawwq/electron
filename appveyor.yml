@@ -2,7 +2,8 @@ version: '{build}-{branch}'
 
 branches:
   only:
-    - /^v\d+(\.\d+){2}$/
+    - master
+skip_non_tags: true
 clone_depth: 3
 
 cache:
