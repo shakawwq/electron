@@ -8,7 +8,7 @@ git:
   depth: 3
 branches:
   only:
-    - /^v.*$/
+    - /^v\d+(\.\d+){2}$/
 
 cache:
   directories:
