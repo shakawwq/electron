@@ -1,7 +1,7 @@
 {
   "name": "bidream",
   "productName": "Bidream",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Bidream Desktop",
   "main": "src/main.js",
   "scripts": {
@@ -28,7 +28,7 @@
         "packageManager": "npm",
         "asar": true,
         "icon": "src/icon",
-        "appCopyright": "© 2018 bidream.com"
+        "appCopyright": "© 2019 bidream.com"
       },
       "electronWinstallerConfig": {
         "setupIcon": "src/icon.ico"

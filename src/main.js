@@ -17,7 +17,7 @@ const createWindow = () => {
   mainWindow = new BrowserWindow({ width, height });
 
   // and load the index.html of the app.
-  mainWindow.loadURL('https://www.82rn.com');
+  mainWindow.loadURL('https://www.bidream.cn');
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools();
